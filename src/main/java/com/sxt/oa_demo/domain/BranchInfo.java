@@ -7,6 +7,19 @@ public class BranchInfo {
 	private String branchName;
 	private String branchDesc;
 	private Integer delFlag;
+	private BranchInfo parentInfo;
+
+	public BranchInfo getParentInfo() {
+		return parentInfo;
+	}
+
+	public void setParentInfo(BranchInfo parentInfo) {
+		this.parentInfo = parentInfo;
+	}
+
+	public String getDisplayBranchNo() {
+		return String.format("%03d", this.branchNo);
+	}
 
 	public Integer getBranchNo() {
 		return branchNo;

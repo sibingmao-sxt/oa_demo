@@ -362,7 +362,7 @@
 															机构管理</a><br> <span id="submenu0901"
 														style="display: none;">&nbsp;&nbsp;&nbsp;&nbsp;<a
 															style="text-decoration: none;"
-															href="systemmanager/department_left.htm"><img
+															href="${pageContext.request.contextPath}/branch/list"><img
 																border="0" src="images/page.gif" width="16" height="16">
 																机构维护</a><br>
 													</span>&nbsp;<a style="text-decoration: none;"

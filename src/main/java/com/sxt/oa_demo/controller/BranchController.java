@@ -2,6 +2,7 @@ package com.sxt.oa_demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -22,5 +23,11 @@ public class BranchController {
 		AjaxRespInfo respInfo = new AjaxRespInfo();
 		respInfo.setData(this.branchService.findAllBranchs());
 		return respInfo;
+	}
+
+	@GetMapping("/list")
+	public String list(Model model) {
+		model.addAttribute("branchList", this.branchService.findAllBranchs());
+		return "system/branch_list";
 	}
 }
