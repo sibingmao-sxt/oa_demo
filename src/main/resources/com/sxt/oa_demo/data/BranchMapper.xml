@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+"-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sxt.oa_demo.data.BranchMapper">
+
+	<select id="findAllBranchs" resultType="BranchInfo">
+		select t.* from
+		branch_info t
+	</select>
+</mapper>
